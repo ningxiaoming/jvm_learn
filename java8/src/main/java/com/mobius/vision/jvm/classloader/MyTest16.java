@@ -50,7 +50,8 @@ public class MyTest16 extends ClassLoader {
         byte[] data = null;
         ByteArrayOutputStream baos = null;
 
-        className = className.replace(".", "\\");
+        //className = className.replace(".", "\\");      //windows  系统
+        className = className.replace(".", "/");//mac 系统
 
         try {
             is = new FileInputStream(new File(this.path + className + this.fileExtension));
